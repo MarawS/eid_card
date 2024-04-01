@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'khaled.alshamaa/ar-php' => array(
+            'pretty_version' => 'v6.3.4',
+            'version' => '6.3.4.0',
+            'reference' => '36550a0d805dc50fcede0132cd8b83c80fe1fd6c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../khaled.alshamaa/ar-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'stil/gd-text' => array(
+            'pretty_version' => 'v1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => 'ae2bd5736dbd6d45a4af1e4b9c573dd4d8d06b11',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stil/gd-text',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

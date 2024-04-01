@@ -1,0 +1,6 @@
+{
+    "require": {
+        "stil/gd-text": "^1.1",
+        "khaled.alshamaa/ar-php": "^6.3"
+    }
+}
