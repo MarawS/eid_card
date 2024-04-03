@@ -2,9 +2,9 @@
 
 $config['cards_dir'] = './bootstrap/images/cards/';
 
-$config['cards'] = ["EID1.png", "EID2.png", "EID3.png", "EID4.png", "EID5.png", "EID6.png"];
+$config['cards'] = ["bofay.jpeg", "hilinky.jpeg", "lifeline.jpeg", "wetaan.jpeg"];
 
-$config['favicon'] = './bootstrap/images/favicon/favicon.ico';
+$config['favicon'] = './bootstrap/images/logos/hilinky_logo.svg';
 
 $config['text_font'] = 'bootstrap/fonts/Amiri-Regular.ttf';
 

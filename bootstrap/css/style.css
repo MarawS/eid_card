@@ -1,20 +1,115 @@
-@font-face {
-    font-family: Amiri;
+/* @font-face {
+    font-family: Cairo;
     src: url('./../fonts/Amiri-Regular.ttf');
-}
+} */
 
 * {
 
-    font-family: 'Amiri';
+    font-family: 'Cairo';
 }
 
-/* body {
-
-    background-image: url('./../images/bg/bg3.png');
+body {
+    width: 100%;
+    background-image: url('./../images/bg/EidMubarak.svg');
     background-repeat: no-repeat;
-    background-attachment: fixed;  
+    background-attachment: fixed;
     background-size: cover;
-} */
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-weight: 550;
+}
+
+.form-select {
+    color: #fff;
+}
+
+.select_box {
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+    border-radius: 8px;
+    background: var(--gradient, linear-gradient(269deg, #EF9453 -30.63%, #EF6358 124.09%));
+}
+
+.select_box:after {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    content: "";
+    z-index: 98;
+}
+
+.select_box select {
+    width: 220px;
+    border: 0;
+    position: relative;
+    z-index: 99;
+    background: none;
+}
+
+.select_box select option {
+    color: black;
+}
+
+.frame {
+    border-radius: 8px;
+    border: 2px solid var(--gradient, #EF9453);
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    border: 2px solid var(--gradient, #EF9453);
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*xs*/
+@media screen and (max-width: 530px) {
+    .image {
+        width: 50px;
+        height: 50px;
+        border: 2px solid var(--gradient, #EF9453);
+    }
+}
+/*sm*/
+@media screen and (max-width: 768px) {
+    .image {
+        width: 100px;
+        height: 100px;
+        border: 2px solid var(--gradient, #EF9453);
+    }
+}
+/*md*/
+@media screen and (max-width: 992px) {
+    .image {
+        width: 200px;
+        height: 200px;
+        border: 2px solid var(--gradient, #EF9453);
+    }
+}
+/*lg*/
+@media screen and (max-width: 1200px) {
+    .image {
+        width: 400px;
+        height: 400px;
+        border: 2px solid var(--gradient, #EF9453);
+    }
+}
 
 .card-div {
     position: relative;
@@ -90,36 +185,36 @@ input.check-colour:checked+img {
     font-size: 1.5rem;
 }
 
-.btn-color{
+.btn-color {
     background-color: #0e1c36;
     color: #fff;
-    
-  }
-  
-  .profile-image-pic{
+
+}
+
+.profile-image-pic {
     /* height: 200px; */
     width: 200px;
     object-fit: cover;
-  }
-  
-  
-  
-  /* .cardbody-color{
+}
+
+
+
+/* .cardbody-color{
     background-color: #ebf2fa;
   } */
 
-  .login-btn {
+.login-btn {
 
     background-color: 00706a;
-  }
-  
-  a{
-    text-decoration: none;
-  }
+}
 
-  #background {
+a {
+    text-decoration: none;
+}
+
+#background {
 
     background-image: url('./../images/bg/ppgov.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-  }
+}
