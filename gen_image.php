@@ -1,14 +1,14 @@
+ 
 <?php
 
 require './vendor/autoload.php';
-
 require_once './config.php';
-
+die($_POST['inputpathphoto']);
 // Set the content type header
-header('Content-Type: image/png; charset=utf8');
+header('Content-Type: image/jpeg; charset=utf8');
 
 // Load the image
-$image = imagecreatefrompng($config['cards_dir'].$_POST['image_selected']);
+$image = imagecreatefromjpeg($_POST['inputpathphoto']); // Change to imagecreatefromjpeg for JPEG
 $image_width = imagesx($image); // Get the width of the image
 
 // Set the font and text color
@@ -17,7 +17,7 @@ $textColor = imagecolorallocate($image, 0, 0, 0); // Black color
 
 // Set the text to be written on the image
 // Render Arabic text using I18N_Arabic
-$arabicText = $_POST['emp_name'];
+$arabicText = $_POST['writename'];
 $arabic = new \ArPHP\I18N\Arabic();
 $renderedText = $arabic->utf8Glyphs($arabicText);
 
@@ -30,7 +30,6 @@ $bbox = imagettfbbox($fontSize, $angle, $font, $renderedText);
 $textWidth = $bbox[2] - $bbox[0];
 $textHeight = $bbox[7] - $bbox[1]; // In case you also want to vertically center
 
-
 // Set the position where the text will be written to center it
 $x = (int)round(($image_width - $textWidth) / 2);
 $y = 780; // You can adjust this similarly for vertical centering
@@ -38,16 +37,15 @@ $y = 780; // You can adjust this similarly for vertical centering
 // Write the text on the image
 imagettftext($image, $fontSize, $angle, $x, $y, $textColor, $font, $renderedText);
 
-// Encode the Arabic filename
-$filename = rawurlencode('بطاقة التهنئة.png');
+// Encode the Arabic filename for the JPEG file
+$filename = rawurlencode('بطاقة التهنئة.jpeg');
 
 header("Content-Disposition: attachment; filename*=UTF-8''{$filename}");
 
 // Output the image
-imagepng($image);
+imagejpeg($image); // Change to imagejpeg for JPEG output
 
 // Free up memory
 imagedestroy($image);
 
 ?>
-
